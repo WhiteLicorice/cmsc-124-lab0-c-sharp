@@ -1,6 +1,6 @@
 # CMSC 124 Lab 0 reference template: C#
 
-A finished Lab 0 project in C#, kept as a reference. It's here for two reasons: to give you a known-good file layout when your own setup is stuck, and to give me a small real project to check the commands printed in the Lab 0 manual against.
+A finished Lab 0 project in C#, kept as a reference. It's here for two reasons: to give you a known-good file layout when your own setup is stuck, and to give me a small project to check the commands printed in the Lab 0 manual against.
 
 The program is deliberately boring. `run` takes one UTF-8 source-file path and copies that file to standard output. A missing or unreadable path prints a diagnostic on standard error and exits 65. That's enough to exercise argument passing, file reading, stdout, exit codes, the build artifact, the test manifest, and the toolchain, without pretending to be an interpreter.
 
@@ -32,9 +32,9 @@ Toolchain observed:
 
 **Ubuntu, 30 July 2026.** The committed `.github/workflows/test.yml` runs green on `ubuntu-latest` against `cmsc-124-harness/v1.0`, reporting `1/1 tests passed`. That run resolved SDK 10.0.302 from `global.json` and produced a `net10.0` assembly.
 
-**Installation routes.** The Windows, Linux, and macOS install commands in the manual's C# section were audited against official documentation and live package-manager metadata on 30 July 2026 (`Microsoft.DotNet.SDK.10` resolves to .NET SDK 10.0.302 through WinGet; Ubuntu 24.04 offers `dotnet-sdk-10.0`; `https://dotnet.microsoft.com/download/dotnet/10.0` answers). They were **not** exercised on a freshly imaged machine, so treat them as verified-on-paper rather than verified-end-to-end.
+**Installation routes.** The Windows, Linux, and macOS install commands in the manual's C# section were audited against official documentation and live package-manager metadata on 30 July 2026 (`Microsoft.DotNet.SDK.10` resolves to .NET SDK 10.0.302 through WinGet. Ubuntu 24.04 offers `dotnet-sdk-10.0`. `https://dotnet.microsoft.com/download/dotnet/10.0` answers). They were **not** exercised on a freshly imaged machine, so treat them as verified-on-paper rather than verified-end-to-end.
 
-**Known limitation, and it matters.** The Windows sequence above was run while this project still pinned .NET 8. The project has since moved to the .NET 10 LTS SDK, because .NET 8 leaves support on 10 November 2026, partway through the course. The Windows machine used for validation carries SDKs 8.0.401 and 9.0.301 and cannot satisfy the current `global.json`, so **the .NET 10 pin is currently proven by the Ubuntu workflow only.**
+**Known limitation.** The Windows sequence above was run while this project still pinned .NET 8. The project has since moved to the .NET 10 LTS SDK, because .NET 8 leaves support on 10 November 2026, partway through the course. The Windows machine used for validation carries SDKs 8.0.401 and 9.0.301 and cannot satisfy the current `global.json`, so **the .NET 10 pin is currently proven by the Ubuntu workflow only.**
 
 ## Relationship to the manual
 
