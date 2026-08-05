@@ -30,7 +30,7 @@ Toolchain observed:
 .NET SDK 9.0.301 (Windows host, see the limitation below)
 ```
 
-**Ubuntu, 30 July 2026.** The committed `.github/workflows/test.yml` runs green on `ubuntu-latest` against `cmsc-124-harness/v1.0`, reporting `1/1 tests passed`. That run resolved SDK 10.0.302 from `global.json` and produced a `net10.0` assembly.
+**Ubuntu, 5 August 2026.** The committed `.github/workflows/test.yml` runs green on `ubuntu-latest` against `cmsc-124-harness/v1.1`, reporting `1/1 tests passed`. It last ran green against `v1.0` on 30 July 2026, before the harness pin moved. That run resolved SDK 10.0.302 from `global.json` and produced a `net10.0` assembly.
 
 **Installation routes.** The Windows, Linux, and macOS install commands in the manual's C# section were audited against official documentation and live package-manager metadata on 30 July 2026 (`Microsoft.DotNet.SDK.10` resolves to .NET SDK 10.0.302 through WinGet. Ubuntu 24.04 offers `dotnet-sdk-10.0`. `https://dotnet.microsoft.com/download/dotnet/10.0` answers). They were **not** exercised on a freshly imaged machine, so treat them as verified-on-paper rather than verified-end-to-end.
 
