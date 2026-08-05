@@ -9,7 +9,7 @@ The program is deliberately boring. `run` takes one UTF-8 source-file path and c
 ```bash
 ./build.sh
 ./run tests/lab0/hello.src
-curl -sSL https://raw.githubusercontent.com/WhiteLicorice/cmsc-124-harness/v1.0/run_tests.py -o run_tests.py
+curl -sSL https://raw.githubusercontent.com/WhiteLicorice/cmsc-124-harness/v1.1/run_tests.py -o run_tests.py
 python run_tests.py tests/lab0
 ```
 
